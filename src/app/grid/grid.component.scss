@@ -1,0 +1,38 @@
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.selectedteam {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.neutral {
+  background: #eedfa5;
+}
+
+.empty {
+  background: #e9e9e9;
+}
+
+.gameover {
+  background: black;
+}
+
+.team1 {
+  background: #ff566c;
+}
+
+.team2 {
+  background: #629bff;
+}
+
+.team3 {
+  background: #64ca6c;
+}
+
+.team4 {
+  background: #ff4eaa;
+}

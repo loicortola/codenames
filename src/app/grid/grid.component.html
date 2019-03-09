@@ -1,0 +1,22 @@
+
+<div class="container" *ngIf="board">
+  <button mat-raised-button color="warn" (click)="reset()">Reset</button>
+  <br/>
+  <br/>
+  <div [ngClass]="{
+  selectedteam: true,
+  team1: board.firstPlayerTeamId === 0,
+  team2: board.firstPlayerTeamId === 1,
+  team3: board.firstPlayerTeamId === 2,
+  team4: board.firstPlayerTeamId === 3}">Premier joueur</div>
+  <br/>
+  <mat-grid-list [cols]="board.rowSize" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let tile of board.tiles" [ngClass]="{neutral: tile.isNeutral(),
+    empty: tile.isEmpty(),
+    gameover: tile.isGameOver(),
+    team1: tile.isOfTeam(0),
+    team2: tile.isOfTeam(1),
+    team3: tile.isOfTeam(2),
+    team4: tile.isOfTeam(3)}"></mat-grid-tile>
+  </mat-grid-list>
+</div>
